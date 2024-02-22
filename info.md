@@ -1,5 +1,3 @@
-[Invite Url](https://discord.com/api/oauth2/authorize?client_id=1208974336795344977&permissions=8&scope=bot+applications.commands "Invite the best discord bot!")
-
 ## 1. Commands
 1. [] kick - (user, reason) Needs to have a reason on why the user was kicked. (Will be logged to the modlog system)
 2. [] ban - (user, reason, messages) Needs to have a reason on why the user was banned, and how many days of messages to delete. (Will be logged to the modlog system)
@@ -25,3 +23,5 @@
 1. [] enable (channel) - Mention a channel to use an already existing channel, or don't to have on created.
 2. [] disable - Disable the system, if the channel was created delete it otherwise don't.
 3. [] toggle - (option [messages, leave, join, channel, guild, voice]) - Provide a list of options the user can enable/disable.
+
+[Discord invite link](https://discord.com/api/oauth2/authorize?client_id=1208974336795344977&permissions=8&scope=bot+applications.commands "Invite the best discord bot!") [Discord Server](https://discord.gg/bngG4MFDMh "Join the project today!")
