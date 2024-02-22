@@ -24,4 +24,4 @@
 2. [] disable - Disable the system, if the channel was created delete it otherwise don't.
 3. [] toggle - (option [messages, leave, join, channel, guild, voice]) - Provide a list of options the user can enable/disable.
 
-[Bot Invite](https://discord.com/api/oauth2/authorize?client_id=1208974336795344977&permissions=8&scope=bot+applications.commands "Invite the best discord bot!") [Discord Server](https://discord.gg/bngG4MFDMh "Join the project today!")
+[Developer](https://discord.com/users/827940585201205258 "I'm the best") [Bot Invite](https://discord.com/api/oauth2/authorize?client_id=1208974336795344977&permissions=8&scope=bot+applications.commands "Invite the best discord bot!") [Discord Server](https://discord.gg/bngG4MFDMh "Join the project today!")
