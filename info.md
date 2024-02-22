@@ -1,4 +1,3 @@
-Certainly! Here's a revised version to make it look better:
 
 ---
 
