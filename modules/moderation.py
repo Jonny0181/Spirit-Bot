@@ -5,6 +5,7 @@ from discord import app_commands
 class Moderation(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
+        self.db = self.bot.db.modlog
 
     @app_commands.command(name="ban")
     async def ban(self, interaction: discord.Interaction, member: discord.Member, reason: str):
