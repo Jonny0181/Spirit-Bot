@@ -12,6 +12,7 @@
         - [] setup - (channel, warn_kick, warn_ban) Needs to have a channel mention for warning logs. warn_kick and warn_ban need a int value of how many warnings until that action is taken.
         - [] warns - (user) Need to mention a user to view their active warnings and reasons behind them. (Preferably an embed containing a list.)
         - [] clear - (user) Need to mention a user to clear all of their active warnings.
+        - [] add - (user, reason) Need to mention a user and reason to give someone a warning. Needs to save a ID that can be used later to remove the warning.
         - [] remove (id, user) Need to pass warning id and mention user to remove a specific warning from the user.
     ## Events:
         - [] logs - When a user is given a warning send a log to the given channel when command setup was used.

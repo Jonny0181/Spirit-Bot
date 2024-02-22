@@ -4,7 +4,7 @@ from discord.ext import commands
 from discord import app_commands
 
 class Utility(commands.Cog):
-    def __init__(self, bot: commands.AutoShardedBot):
+    def __init__(self, bot: commands.Bot):
         self.bot = bot
         
     @commands.hybrid_command(name="ping")
@@ -16,5 +16,5 @@ class Utility(commands.Cog):
         latency = (end_time - start_time) * 1000
         await message.edit(content=f"Pong! {round(latency)}ms")
         
-async def setup(bot: commands.AutoShardedBot):
+async def setup(bot: commands.Bot):
     await bot.add_cog(Utility(bot))

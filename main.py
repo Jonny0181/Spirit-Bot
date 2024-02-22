@@ -2,12 +2,14 @@ import os
 import discord
 from dotenv import load_dotenv
 from discord.ext import commands
+import motor.motor_asyncio as motor
 
 load_dotenv()
 
-class SpiritBot(commands.AutoShardedBot):
+class SpiritBot(commands.Bot):
     def __init__(self, **options):
         super().__init__(**options)
+        self.db = motor.AsyncIOMotorClient(os.getenv('MONGO_DB'))[os.getenv('MONGO_DB_COLLECTION')]
         
     async def on_ready(self):
         print(f'[Main] Logged in as: {self.user.name}')
