@@ -1,5 +1,8 @@
+# Todo and Progress Tracker
+
+### Task Status: In Progress and Completed
 🔃 In progess  
-✅ Done
+✅ Completed
 
 ## 1. Commands
 1. 🔃 kick - (user, reason) Needs to have a reason on why the user was kicked. (Will be logged to the modlog system)
