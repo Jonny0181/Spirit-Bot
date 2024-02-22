@@ -1,4 +1,4 @@
-# BOT INVITE URL: https://discord.com/api/oauth2/authorize?client_id=1208974336795344977&permissions=8&scope=bot+applications.commands
+[Invite Url](https://discord.com/api/oauth2/authorize?client_id=1208974336795344977&permissions=8&scope=bot+applications.commands "Invite the best discord bot!")
 
 ## 1. Commands
 1. [] kick - (user, reason) Needs to have a reason on why the user was kicked. (Will be logged to the modlog system)
