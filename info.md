@@ -1,3 +1,6 @@
+🔃 In progess
+✅ Done
+
 ## 1. Commands
 1. 🔃 kick - (user, reason) Needs to have a reason on why the user was kicked. (Will be logged to the modlog system)
 2. 🔃 ban - (user, reason, messages) Needs to have a reason on why the user was banned, and how many days of messages to delete. (Will be logged to the modlog system)
