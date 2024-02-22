@@ -17,7 +17,7 @@
 
 ## 2. Systems
 
-### Warning System:
+### Warnings:
 
 #### Commands:
 1. 🔃 **setup** - *(channel, warn_kick, warn_ban)* - Needs to have a channel mention for warning logs. warn_kick and warn_ban need an int value of how many warnings until that action is taken.
