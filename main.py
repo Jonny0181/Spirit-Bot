@@ -37,5 +37,5 @@ class SpiritBot(commands.Bot):
         print(f'[Main] Synced {len(synced)} application command(s).')
         
 if __name__ == "__main__":
-    Spirit = SpiritBot(command_prefix=commands.when_mentioned_or(os.getenv('PREFIX')), max_messages=None, intents=discord.Intents.all())
+    Spirit = SpiritBot(command_prefix=commands.when_mentioned_or(os.getenv('PREFIX')), intents=discord.Intents.all())
     Spirit.run(os.getenv("TOKEN"))

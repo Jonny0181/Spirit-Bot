@@ -1,4 +1,5 @@
 import discord
+import datetime
 from discord.ext import commands
 from discord import app_commands
 from typing import Optional, Literal, List
@@ -145,11 +146,32 @@ class Modlog(commands.GroupCog, name="modlog"):
     # MESSAGES
     @commands.Cog.listener()
     async def on_message_edit(self, before: discord.Message, after: discord.Message):
-        ...
+        if before.author.bot: return
+        
+        data = await self.db.find_one({"_id": before.guild.id})
+        if data and data['enabled'] is True and 'Messages' in data['enabledSettings']:
+            e = discord.Embed(colour=discord.Colour.orange(), timestamp=datetime.datetime.now())
+            e.set_thumbnail(url=before.guild.icon)
+            e.set_author(name=f"Message from {before.author.display_name} was edited!", icon_url=before.author.display_avatar)
+            e.add_field(name="Before:", value=before.content, inline=False)
+            e.add_field(name="After:", value=after.content, inline=False)
+            e.set_footer(text=f"#{before.channel.name}")
+            
+            await (await before.guild.fetch_channel(data['channelID'])).send(embed=e)
         
     @commands.Cog.listener()
     async def on_message_delete(self, message: discord.Message):
-        ...
+        if message.author.bot: return
+        
+        data = await self.db.find_one({"_id": message.guild.id})
+        if data and data['enabled'] is True and 'Messages' in data['enabledSettings']:
+            e = discord.Embed(colour=discord.Colour.red(), timestamp=datetime.datetime.now())
+            e.set_thumbnail(url=message.guild.icon)
+            e.set_author(name=f"Message from {message.author.display_name} was deleted!", icon_url=message.author.display_avatar)
+            e.add_field(name="Message:", value=message.content, inline=False)
+            e.set_footer(text=f"#{message.channel.name}")
+            
+            await (await message.guild.fetch_channel(data['channelID'])).send(embed=e)
         
     @commands.Cog.listener()
     async def on_bulk_message_delete(self, messages: List[discord.Message]):
