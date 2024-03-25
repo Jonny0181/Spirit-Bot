@@ -20,11 +20,12 @@
 ### Warnings:
 
 #### Commands:
-1. 🔃 **setup** - *(channel, warn_kick, warn_ban)* - Needs to have a channel mention for warning logs. warn_kick and warn_ban need an int value of how many warnings until that action is taken.
-2. 🔃 **warns** - *(user)* - Need to mention a user to view their active warnings and reasons behind them. (Preferably an embed containing a list.)
-3. 🔃 **clear** - *(user)* - Need to mention a user to clear all of their active warnings.
-4. 🔃 **add** - *(user, reason)* - Need to mention a user and reason to give someone a warning. Needs to save an ID that can be used later to remove the warning.
-5. 🔃 **remove** - *(id, user)* - Need to pass the warning ID and mention the user to remove a specific warning from the user.
+1. ✅ **setup** - *(channel, warn_kick, warn_ban)* - Needs to have a channel mention for warning logs. warn_kick and warn_ban need an int value of how many warnings until that action is taken.
+2. ✅ **warns** - *(user)* - Need to mention a user to view their active warnings and reasons behind them. (Preferably an embed containing a list.)
+3. ✅ **clear** - *(user)* - Need to mention a user to clear all of their active warnings.
+4. ✅ **add** - *(user, reason)* - Need to mention a user and reason to give someone a warning. Needs to save an ID that can be used later to remove the warning.
+5. ✅ **remove** - *(id, user)* - Need to pass the warning ID and mention the user to remove a specific warning from the user.
+6. Implement checks to make sure you can't give admins warnings, also need to check about higher roles than the bot. (Permissions issue when kicking/banning)
 
 #### Events:
 1. 🔃 **logs** - When a user is given a warning, send a log to the given channel when command setup was used.
