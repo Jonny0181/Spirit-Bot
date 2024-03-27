@@ -25,18 +25,19 @@
 3. ✅ **clear** - *(user)* - Need to mention a user to clear all of their active warnings.
 4. ✅ **add** - *(user, reason)* - Need to mention a user and reason to give someone a warning. Needs to save an ID that can be used later to remove the warning.
 5. ✅ **remove** - *(id, user)* - Need to pass the warning ID and mention the user to remove a specific warning from the user.
-6. Implement checks to make sure you can't give admins warnings, also need to check about higher roles than the bot. (Permissions issue when kicking/banning)
+6. ✅ Implement checks to make sure you can't give admins warnings, also need to check about higher roles than the bot. (Permissions issue when kicking/banning)
 
 #### Events:
-1. 🔃 **logs** - When a user is given a warning, send a log to the given channel when command setup was used.
-2. 🔃 **commit** - Check users' warnings when one is given, if the number of warns matches warn_kick or warn_ban... PERFORM ACTION!
+1. ✅ **logs** - When a user is given a warning, send a log to the given channel when command setup was used.
+2. ✅ **commit** - Check users' warnings when one is given, if the number of warns matches warn_kick or warn_ban... PERFORM ACTION!
 
 ### ModLog:
 
 #### Commands:
-1. 🔃 **enable** - *(channel)* - Mention a channel to use an already existing channel, or don't to have one created.
-2. 🔃 **disable** - Disable the system, if the channel was created delete it otherwise don't.
-3. 🔃 **toggle** - *(option [messages, leave, join, channel, guild, voice])* - Provide a list of options the user can enable/disable.
+1. ✅ **enable** - *(channel)* - Mention a channel to use an already existing channel, or don't to have one created.
+2. ✅ **disable** - Disable the system, if the channel was created delete it otherwise don't.
+3. ✅ **toggle** - *(option [messages, leave, join, channel, guild, voice])* - Provide a list of options the user can enable/disable.
+4. 🔃 Finish implementing all modlog events.
 
 ---
 

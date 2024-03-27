@@ -13,6 +13,13 @@ class SpiritBot(commands.Bot):
         
     async def on_ready(self):
         print(f'[Main] Logged in as: {self.user.name}')
+        
+        try:
+            await self.load_extension('jishaku')
+            print(f"Loaded jishaku!")
+        except Exception as e:
+            print(f'ERR loading Jishaku: {str(e)}')
+            
         await self.load_modules()
 
     async def load_modules(self):
